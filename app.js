@@ -16,6 +16,6 @@ app.get("/", (req, res) => {
 app.use('/author-management', authorRouter)
 
 // Run the app
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Express app is listening on port http://localhost:${port}`)
 });
